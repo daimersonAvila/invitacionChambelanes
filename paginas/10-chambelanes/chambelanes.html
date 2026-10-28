@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Has sido seleccionado · Mis XV Años</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../../assets/base.css" />
+  <link rel="stylesheet" href="../../assets/nav.css" />
+  <link rel="stylesheet" href="chambelanes.css" />
+</head>
+<body>
+
+<!-- Canvas de partículas de fondo -->
+<canvas id="particles-canvas"></canvas>
+
+<div id="pageFlip">
+  <section class="section bg-dark-red chambelanes-section">
+
+    <!-- Cinta dorada top -->
+    <div class="ribbon-top"></div>
+
+    <!-- Flores decorativas esquina -->
+    <img src="../../img/flores1.png" alt="" class="flowers-top" aria-hidden="true" />
+
+    <!-- Mariposas animadas -->
+    <img src="../../img/mar1.png" alt="" class="bfly bfly-1" aria-hidden="true" />
+    <img src="../../img/mar1.png" alt="" class="bfly bfly-2" aria-hidden="true" />
+    <img src="../../img/mar1.png" alt="" class="bfly bfly-3" aria-hidden="true" />
+
+    <!-- Badge superior -->
+    <div class="badge-selected" aria-label="Invitación especial">
+      <span class="badge-dot"></span>
+      <span>Invitación Especial</span>
+      <span class="badge-dot"></span>
+    </div>
+
+    <!-- Corona -->
+    <div class="crown-display" role="img" aria-label="Corona de quinceañera">
+      <img src="../../img/corona.png" alt="Corona" />
+    </div>
+
+    <!-- Título principal -->
+    <h1 class="main-title">Has sido seleccionado</h1>
+
+    <!-- Divisor -->
+    <div class="divider" aria-hidden="true">
+      <span class="divider-line"></span>
+      <span class="divider-icon">✦</span>
+      <span class="divider-line"></span>
+    </div>
+
+    <!-- Tarjeta glassmorphism con el contenido -->
+    <div class="glass-card">
+      <img src="../../img/rosa1.png" alt="Rosa" class="big-rose" />
+
+      <p class="personal-message">
+        Es un honor para mí invitarte a ser parte de mi corte de chambelanes
+        en este día tan especial.
+      </p>
+
+      <p class="personal-message-second">
+        Tu presencia hará que esta noche sea aún más mágica e inolvidable.
+      </p>
+
+      <div class="stars-row" aria-hidden="true">✦ ✦ ✦</div>
+    </div>
+
+    <!-- Botón WhatsApp -->
+    <div class="whatsapp-container">
+      <a
+        href="https://wa.me/573142739961?text=¡Hola!%20Confirmo%20que%20he%20sido%20seleccionado%20como%20chambelán%20para%20los%20XV%20años%20de%20Keidy%20Julieth%20💖%0A%0A¡Cuenta%20conmigo%20para%20ese%20día%20tan%20especial!%20✨"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-whatsapp"
+        aria-label="Confirmar asistencia por WhatsApp"
+      >
+        <span class="wa-icon" aria-hidden="true">✆</span>
+        <span>Confirmar por WhatsApp</span>
+      </a>
+    </div>
+
+    <p class="small-note">
+      Al tocar el botón se abrirá WhatsApp con un mensaje listo para enviar.
+    </p>
+
+  </section>
+</div>
+
+<!-- Scripts -->
+<script src="../../assets/animations.js"></script>
+<script src="../../assets/nav.js"></script>
+<script src="chambelanes.js"></script>
+</body>
+</html>
