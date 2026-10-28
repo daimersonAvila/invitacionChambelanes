@@ -2,45 +2,188 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- ── Título y descripción ── -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Has sido seleccionado · Mis XV Años</title>
   <meta name="description" content="Has sido seleccionado para ser parte de mi corte de chambelanes. Domingo 29 de noviembre de 2026." />
   <meta name="theme-color" content="#4a0000" />
-
-  <!-- ── Vista previa en WhatsApp, Facebook y Telegram ──
-       IMPORTANTE: las direcciones deben ser COMPLETAS (con https://) y usar
-       el dominio de producción. Si tu dominio no es este, cámbialo en las 3 líneas. -->
   <meta property="og:type"         content="website" />
   <meta property="og:locale"       content="es_CO" />
-  <meta property="og:site_name"    content="Mis XV Años · Keidy Julieth" />
-  <meta property="og:url"          content="https://invitacion-chambelanes.vercel.app/" />
+  <meta property="og:site_name"    content="Mis XV Años" />
   <meta property="og:title"        content="Has sido seleccionado · Mis XV Años" />
   <meta property="og:description"  content="✨ Has sido seleccionado para ser parte de mi corte de chambelanes. Toca para ver tu invitación especial." />
-  <meta property="og:image"        content="https://invitacion-chambelanes.vercel.app/og.png" />
-  <meta property="og:image:type"   content="image/png" />
+  <meta property="og:url"          content="https://invitacion-chambelanes.vercel.app/" />
+  <meta property="og:image"        content="https://invitacion-chambelanes.vercel.app/assets/og.jpg" />
+  <meta property="og:image:type"   content="image/jpeg" />
+  <meta property="og:image:secure_url" content="https://invitacion-chambelanes.vercel.app/assets/og.jpg" />
   <meta property="og:image:width"  content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt"    content="Has sido seleccionado - Mis chambelanes - Keidy Julieth - 29 de noviembre de 2026" />
-
   <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="Has sido seleccionado · Mis XV Años" />
-  <meta name="twitter:description" content="✨ Has sido seleccionado para ser parte de mi corte de chambelanes." />
-  <meta name="twitter:image"       content="https://invitacion-chambelanes.vercel.app/og.png" />
 
-  <!-- Ya NO usamos <meta http-equiv="refresh">: algunos lectores de vistas
-       previas la siguen y terminan leyendo la otra página, que no tiene estas etiquetas. -->
-  <style>
-    body{margin:0;min-height:100vh;display:grid;place-items:center;background:#1a0000;color:#f9e596;font-family:Georgia,serif;text-align:center}
-    a{color:#f9e596}
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Cinzel:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/invitacion.css" />
 </head>
-<body>
-<p>Abriendo tu invitación… <br /><a href="paginas/10-chambelanes/chambelanes.html">Toca aquí si no se abre sola</a></p>
-<script>
-  // Las personas son redirigidas; los lectores de vistas previas solo leen las etiquetas de arriba.
-  window.location.replace("paginas/10-chambelanes/chambelanes.html");
-</script>
+<body class="bloqueado">
+<!-- Filtro que rompe los bordes de los pergaminos de CSS -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="rugoso" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="14"/></filter></svg>
+
+
+<!-- Música (YouTube oculto). El enlace se cambia en assets/invitacion.js -->
+<div id="musica"><iframe id="yt" title="Música" allow="autoplay; encrypted-media" tabindex="-1"></iframe></div>
+
+<button id="musicBtn" aria-label="Música"><span>♪</span></button>
+<div id="petalos"   aria-hidden="true"></div>
+<div id="mariposas" aria-hidden="true"></div>
+<button id="autoBtn" aria-label="Pausar o reanudar el recorrido automático"><span>❚❚</span></button>
+
+<!-- PORTADA: el libro se abre al tocarlo -->
+<div id="portada">
+  <button id="abrir" aria-label="Abrir invitación">
+    <img src="assets/img/libro.png" alt="Libro Mis 15 años" />
+    <span>Toca para abrir tu invitación</span>
+  </button>
+</div>
+
+<main>
+
+  <!-- 1. Portada -->
+  <section class="sec hero">
+    <img class="flores" src="assets/img/flores1.png" alt="" />
+    <img class="bfly b1" src="assets/img/mar1.png" alt="" />
+    <img class="bfly b2" src="assets/img/mar1.png" alt="" />
+    <img class="bfly b3" src="assets/img/mar1.png" alt="" />
+    <div class="aro">
+      <img src="assets/img/aro.png" alt="" />
+      <h1>Mis 15<br />Años</h1>
+    </div>
+    <p class="nombre">Keidy Julieth</p>
+    <p class="apellido">Invitación especial</p>
+    <img class="princesa" src="assets/img/princesa1.png" alt="Keidy Julieth" />
+  </section>
+
+  <!-- 2. Sobre con sello -->
+  <section class="sec sobre-sec" data-palabras="4">
+    <div class="sobre rev" aria-label="Sobre con tu invitación">
+      <div class="sobre-dorso"></div>
+      <figure class="sobre-foto"><img src="assets/fotos/foto3.jpg" alt="Keidy Julieth" loading="lazy" /></figure>
+      <div class="sobre-frente"></div>
+      <div class="sobre-tapa"><div class="tapa-forma"></div><div class="sello"><span>XV</span></div></div>
+    </div>
+  </section>
+
+  <!-- 3. Has sido seleccionado -->
+  <section class="sec" data-corazon>
+    <div class="pergamino rev">
+      <img class="rosas-a" src="assets/img/racimo1.png" alt="" />
+      <div class="perg-cont">
+        <h2 class="script-t grande">Has sido seleccionado</h2>
+        <span class="filete"></span>
+        <p class="lugar">Es un honor para mí invitarte a ser parte de mi corte de chambelanes en este día tan especial.</p>
+        <p class="lugar">Tu presencia hará que esta noche sea aún más mágica e inolvidable.</p>
+      </div>
+      <img class="rosas-b" src="assets/img/racimo2.png" alt="" />
+    </div>
+  </section>
+
+  <!-- 4. Foto 1 -->
+  <section class="band">
+    <figure class="foto rev"><img src="assets/fotos/foto1.jpg" alt="Keidy Julieth" loading="lazy" /></figure>
+  </section>
+
+  <!-- 5. Fecha -->
+  <section class="sec fecha" data-corazon>
+    <h2 class="rev invita">
+      Te espero para celebrar<br />
+      mis 15 años<br />
+      junto a mi corte de chambelanes
+    </h2>
+    <div class="dia rev">
+      <div><b>Domingo</b><i>4:00 pm</i></div>
+      <strong>29</strong>
+      <div><b>Noviembre</b><i>2026</i></div>
+    </div>
+  </section>
+
+  <!-- 6. Cuenta regresiva -->
+  <section class="sec banda">
+    <div class="cinta rev"><span>29 de noviembre de 2026</span></div>
+    <p class="script-t grande rev">Que comience la</p>
+    <p class="cuenta-t rev">Cuenta regresiva</p>
+    <div class="cuenta-fila rev">
+      <div><span id="cd-dias">--</span><small>Días</small></div><em>:</em>
+      <div><span id="cd-horas">--</span><small>Horas</small></div><em>:</em>
+      <div><span id="cd-min">--</span><small>Minutos</small></div><em>:</em>
+      <div><span id="cd-seg">--</span><small>Segundos</small></div>
+    </div>
+  </section>
+
+  <!-- 7. Castillo -->
+  <section class="sec">
+    <div class="castillo rev">
+      <img src="assets/img/castillo.png" alt="Castillo" loading="lazy" />
+      <img class="rosas" src="assets/img/rosa1.png" alt="" />
+    </div>
+  </section>
+
+  <!-- 8. Agenda la fecha -->
+  <section class="sec agenda">
+    <h2 class="script-t grande rev">Agenda la fecha</h2>
+    <div class="orn rev" aria-hidden="true"><i></i><b>❦</b><i></i></div>
+    <div class="calendario rev" id="calendario" aria-label="Calendario de noviembre 2026"></div>
+  </section>
+
+  <!-- 9. Foto 2 -->
+  <section class="band">
+    <figure class="foto rev"><img src="assets/fotos/foto2.jpg" alt="Keidy Julieth" loading="lazy" /></figure>
+  </section>
+
+  <!-- 10. Lugares -->
+  <section class="sec">
+    <div class="pergamino rev">
+      <img class="rosas-a" src="assets/img/racimo1.png" alt="" />
+      <div class="perg-cont">
+        <svg class="icono" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 3v12M26 8h12"/><path d="M14 57V31l18-12 18 12v26z"/><path d="M26 57V43a6 6 0 0 1 12 0v14"/><path d="M7 57h50"/></svg>
+        <h2 class="script-t">Ceremonia religiosa</h2>
+        <p class="lugar">Capilla Vereda Chen</p>
+        <p class="hora">4:00 pm</p>
+        <span class="filete"></span>
+        <svg class="icono" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g transform="rotate(-14 20 40)"><path d="M12 8h16l-2 20a6 6 0 0 1-12 0z"/><path d="M20 34v18M13 54h14"/></g><g transform="rotate(14 44 40)"><path d="M36 8h16l-2 20a6 6 0 0 1-12 0z"/><path d="M44 34v18M37 54h14"/></g><path d="M30 4l1.5 4M36 3l-1 4M26 6l2 3" stroke-width="1.8"/></svg>
+        <h2 class="script-t">Recepción y celebración</h2>
+        <p class="lugar">Residencia Familia Avila Rodríguez</p>
+        <a class="boton" id="mapa" target="_blank" rel="noopener">Ver ubicación</a>
+      </div>
+      <img class="rosas-b" src="assets/img/racimo2.png" alt="" />
+    </div>
+  </section>
+
+  <!-- 11. Código de vestimenta -->
+  <section class="sec">
+    <div class="pergamino rev">
+      <img class="rosas-a" src="assets/img/racimo1.png" alt="" />
+      <div class="perg-cont">
+        <h2 class="script-t grande">Código de vestimenta</h2>
+        <div class="look">
+          <figure><div class="prenda"><img src="assets/img/camisa-blanca.png" alt="Camisa blanca" loading="lazy" /></div><figcaption>Camisa <strong>blanca</strong></figcaption></figure>
+          <figure><div class="prenda"><img src="assets/img/pantalon-negro.png" alt="Pantalón negro" loading="lazy" /></div><figcaption>Pantalón <strong>negro</strong></figcaption></figure>
+        </div>
+      </div>
+      <img class="rosas-b" src="assets/img/racimo2.png" alt="" />
+    </div>
+  </section>
+
+  <!-- 12. Confirmación y cierre con fuegos -->
+  <section class="sec cierre" data-corazon>
+    <canvas id="fuegos" aria-hidden="true"></canvas>
+    <img class="corona rev" src="assets/img/corona.png" alt="" />
+    <h2 class="titulo final rev">¡Cuento contigo!</h2>
+    <p class="mensaje rev">Confirma tu participación para que tu lugar en mi corte quede reservado.</p>
+    <a class="boton rev" href="https://wa.me/573142019254?text=%C2%A1Hola%21%20Confirmo%20que%20he%20sido%20seleccionado%20como%20chambel%C3%A1n%20para%20los%20XV%20a%C3%B1os%20de%20Keidy%20Julieth%20%F0%9F%92%96%0A%0A%C2%A1Cuenta%20conmigo%20para%20ese%20d%C3%ADa%20tan%20especial%21%20%E2%9C%A8" target="_blank" rel="noopener noreferrer" aria-label="Confirmar por WhatsApp">Confirmar por WhatsApp</a>
+    <p class="nota rev">Al tocar el botón se abrirá WhatsApp con un mensaje listo para enviar.</p>
+    <img class="rosa rev" src="assets/img/rosa1.png" alt="" />
+  </section>
+
+</main>
+
+<script src="assets/invitacion.js"></script>
+<script src="assets/fuegos.js"></script>
 </body>
 </html>
