@@ -14,24 +14,22 @@
 </head>
 <body>
 
-<!-- Canvas de partículas de fondo -->
-<canvas id="particles-canvas"></canvas>
+<!-- Pétalos — igual que invitacion2 -->
+<div id="petalos-chambelanes"></div>
 
 <div id="pageFlip">
   <section class="section bg-dark-red chambelanes-section">
 
-    <!-- Cinta dorada top -->
     <div class="ribbon-top"></div>
 
-    <!-- Flores decorativas esquina -->
     <img src="../../img/flores1.png" alt="" class="flowers-top" aria-hidden="true" />
 
-    <!-- Mariposas animadas -->
+    <!-- Mariposas — mismo estilo que invitacion2 -->
     <img src="../../img/mar1.png" alt="" class="bfly bfly-1" aria-hidden="true" />
     <img src="../../img/mar1.png" alt="" class="bfly bfly-2" aria-hidden="true" />
     <img src="../../img/mar1.png" alt="" class="bfly bfly-3" aria-hidden="true" />
 
-    <!-- Badge superior -->
+    <!-- Badge -->
     <div class="badge-selected" aria-label="Invitación especial">
       <span class="badge-dot"></span>
       <span>Invitación Especial</span>
@@ -43,17 +41,16 @@
       <img src="../../img/corona.png" alt="Corona" />
     </div>
 
-    <!-- Título principal -->
+    <!-- Título estilo Great Vibes como el resto de la invitación -->
     <h1 class="main-title">Has sido seleccionado</h1>
 
-    <!-- Divisor -->
     <div class="divider" aria-hidden="true">
       <span class="divider-line"></span>
       <span class="divider-icon">✦</span>
       <span class="divider-line"></span>
     </div>
 
-    <!-- Tarjeta glassmorphism con el contenido -->
+    <!-- Marco de texto — coherente con .marco de invitacion2 -->
     <div class="glass-card">
       <img src="../../img/rosa1.png" alt="Rosa" class="big-rose" />
 
@@ -67,6 +64,29 @@
       </p>
 
       <div class="stars-row" aria-hidden="true">✦ ✦ ✦</div>
+    </div>
+
+    <!-- Código de vestimenta -->
+    <div class="dress-code-card" role="region" aria-label="Código de vestimenta">
+      <div class="dress-code-title">
+        <span class="dress-icon" aria-hidden="true">👔</span>
+        <span>Código de Vestimenta</span>
+      </div>
+      <div class="dress-look">
+        <div class="dress-look-item">
+          <div class="dress-look-img-wrap">
+            <img src="../../img/camisa-blanca.png" alt="Camisa blanca" class="dress-look-img" />
+          </div>
+          <span class="dress-look-label">Camisa <strong>Blanca</strong></span>
+        </div>
+        <div class="dress-look-divider" aria-hidden="true">✦</div>
+        <div class="dress-look-item">
+          <div class="dress-look-img-wrap">
+            <img src="../../img/pantalon-negro.png" alt="Pantalón negro" class="dress-look-img" />
+          </div>
+          <span class="dress-look-label">Pantalón <strong>Negro</strong></span>
+        </div>
+      </div>
     </div>
 
     <!-- Botón WhatsApp -->
@@ -90,7 +110,6 @@
   </section>
 </div>
 
-<!-- Scripts -->
 <script src="../../assets/animations.js"></script>
 <script src="../../assets/nav.js"></script>
 <script src="chambelanes.js"></script>
